@@ -1,0 +1,9 @@
+    bool searchMatrix(vector<vector<int>>& matrix, int target) {
+        bool exist = 0;
+        for(int i=0; i< matrix.size();++i){
+            
+            vector<int> temp = matrix[i];
+            exist |= binary_search(temp.begin(), temp.end(), target );
+        }
+        return exist;
+    }
